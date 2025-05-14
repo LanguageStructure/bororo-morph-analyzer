@@ -19,6 +19,17 @@ python train_slot_crfs.py
 
 ## Citation
 
-If you use this tool, please cite it using the Zenodo DOI below (to be assigned):
+If you use this tool, please cite it:
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.xxxxxxx.svg)](https://doi.org/10.5281/zenodo.xxxxxxx)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15404849.svg)](https://doi.org/10.5281/zenodo.15404849)
+
+```bibtex
+@software{gerardi_bororo_2024,
+  author       = {Fabrício Ferraz Gerardi},
+  title        = {Bororo Morphological Analyzer},
+  year         = 2025,
+  publisher    = {Zenodo},
+  version      = {1.0.0},
+  doi          = {10.5281/zenodo.XXXXXXX},
+  url          = {https://doi.org/10.5281/zenodo.XXXXXXX}
+}
