@@ -15,7 +15,7 @@ This repository contains a slot-based morphological analyzer for the Bororo lang
 
 ```bash
 python train_slot_crfs.py
-
+```
 
 ## Citation
 
