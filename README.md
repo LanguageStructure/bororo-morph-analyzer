@@ -2,6 +2,10 @@
 
 This repository contains a slot-based morphological analyzer for the Bororo language, built using Conditional Random Fields (CRFs) trained on the Bororo Universal Dependencies Treebank.
 
+## Web address
+
+[Access here](https://boeenomoto.pythonanywhere.com/Morfologia)
+
 ## Features
 
 - Per-feature CRF models (Voice, Reflexivity, Tense, etc.)
