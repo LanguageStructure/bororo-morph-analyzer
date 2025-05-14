@@ -1,6 +1,6 @@
 # Bororo Morphological Analyzer
 
-This repository contains a slot-based morphological analyzer for the Bororo language, built using Conditional Random Fields (CRFs) trained on Universal Dependencies-style annotated corpora.
+This repository contains a slot-based morphological analyzer for the Bororo language, built using Conditional Random Fields (CRFs) trained on the Bororo Universal Dependencies Treebank.
 
 ## Features
 
