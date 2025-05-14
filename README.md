@@ -15,3 +15,10 @@ This repository contains a slot-based morphological analyzer for the Bororo lang
 
 ```bash
 python train_slot_crfs.py
+
+
+## Citation
+
+If you use this tool, please cite it using the Zenodo DOI below (to be assigned):
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.xxxxxxx.svg)](https://doi.org/10.5281/zenodo.xxxxxxx)
