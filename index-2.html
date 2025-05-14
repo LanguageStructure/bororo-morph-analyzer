@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Analisador Morfológico Bororo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f9f9f9;
+      max-width: 600px;
+      margin: auto;
+    }
+    h1 {
+      color: #333;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 1em;
+      width: 100%;
+      margin-top: 10px;
+    }
+    pre {
+      background: #eef;
+      padding: 10px;
+      margin-top: 20px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <h1>Analisador Morfológico Bororo</h1>
+  <input type="text" id="palavra" placeholder="Digite uma palavra Bororo">
+  <button onclick="analisar()">Analisar</button>
+  <pre id="resultado"></pre>
+
+  <script>
+  function analisar() {
+    const palavra = document.getElementById("palavra").value;
+    const resultadoDiv = document.getElementById("resultado");
+
+    // Clear previous result
+    resultadoDiv.innerHTML = "⏳ Analisando...";
+
+    fetch(`/analisar?palavra=${encodeURIComponent(palavra)}`)
+      .then(response => {
+        if (!response.ok) throw new Error("HTTP " + response.status);
+        return response.json();
+      })
+      .then(data => {
+        if (data.erro) {
+          resultadoDiv.innerHTML = `<span style="color:red;">Erro: ${data.erro}</span>`;
+        } else {
+          const morfemas = data.morfemas.length
+            ? data.morfemas.map(m => `<li>${m}</li>`).join("")
+            : "<li><i>nenhum morfema identificado</i></li>";
+
+          resultadoDiv.innerHTML = `
+            <p><strong>Palavra:</strong> ${data.palavra}</p>
+            <p><strong>Morfemas:</strong></p>
+            <ul>${morfemas}</ul>
+          `;
+        }
+      })
+      .catch(error => {
+        resultadoDiv.innerHTML = `<span style="color:red;">Erro na análise: ${error.message}</span>`;
+      });
+  }
+</script>
+</body>
+</html>
